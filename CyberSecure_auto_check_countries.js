@@ -1,13 +1,27 @@
 /*
-12-08-2025 TJH:
-This script is designed to quickly select the allowed countries in the Ubiquiti Network Controller web interface.
-The script searches for the corresponding checkboxes (including those inside iframes and open Shadow DOM), simulates real user clicks to trigger React/DOM events, and, if necessary, sets checked and aria-checked="true" as a fallback.
-A summary table is printed in the browser console showing which items were found and updated.
+12-08-2025 — TJH
+Tested and working on Network Version 9.4.11
 
-How to use this script:
-1. Make sure the country of the origin of the IP you want to use to connect to the controller is on this list.
-2. Make sure that in region blocking, you select the ALLOW list.
-3. Paste the script in the Element-part of your browser.
+
+Purpose:
+Quickly select a predefined list of allowed countries in the Ubiquiti Network Controller web interface.
+
+How it works:
+- Finds the relevant country checkboxes (including those inside iframes and open Shadow DOM).
+- Simulates real user clicks to trigger React/DOM events.
+- Falls back to directly setting `checked` and `aria-checked="true"` if needed.
+- Prints a summary table in the browser console showing which countries were found and updated.
+
+Before using:
+1. Ensure the country of the IP address you will connect from is included in the allowed list.
+2. In Region Blocking settings, make sure you select the **ALLOW** list.
+
+Usage:
+1. Go to **Settings > Region Blocking** and enable it.
+2. Set both directions to **Allow**.
+3. Click **Edit**.
+4. Right-click any country, choose **Inspect Element**.
+5. Paste this script into the browser’s Element-developer console and run it.
 */
 
 (() => {
