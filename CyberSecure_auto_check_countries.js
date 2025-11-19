@@ -33,7 +33,7 @@ Usage:
     "Liechtenstein", "Luxembourg", "Monaco", "Montenegro", "Malta", "Netherlands",
     "Norway", "New Zealand", "Poland", "Portugal", "Romania", "Serbia", "Sweden",
     "Slovenia", "Slovakia", "San Marino", "Suriname", "Sint Maarten",
-    "U.S. Minor Outlying Islands", "United States", "Vatican City"
+    "U.S. Minor Outlying Islands", "United States", "Vatican City", "Bulgaria"
   ];
   const want = true;
   const unique = arr => [...new Set(arr)];
